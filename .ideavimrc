@@ -1,0 +1,4 @@
+set nu rnu
+set visualbell
+nnoremap zC :action CollapseRegionRecursively<CR>
+nnoremap zO :action ExpandRegionRecursively<CR>

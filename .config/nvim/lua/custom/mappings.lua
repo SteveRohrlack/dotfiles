@@ -16,4 +16,14 @@ M.dap_go = {
     },
   },
 }
+
+M.general = {
+  n = {
+    ["<C-h>"] = { "<cmd>TmuxNavigateLeft<cr>", "tmux move left" },
+    ["<C-l>"] = { "<cmd>TmuxNavigateDown<cr>", "tmux move right" },
+    ["<C-j>"] = { "<cmd>TmuxNavigateUp<cr>", "tmux move down" },
+    ["<C-k>"] = { "<cmd>TmuxNavigateRight<cr>", "tmux move up" },
+  }
+}
+
 return M

@@ -59,6 +59,8 @@ local plugins = {
   {
     "vimwiki/vimwiki",
     lazy = false,
+    init = function ()
+    end
   },
   {
     "christoomey/vim-tmux-navigator",

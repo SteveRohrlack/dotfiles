@@ -1,4 +1,4 @@
-plugins=(git docker)
+plugins=(git docker zsh-autosuggestions)
 
 alias ll='ls -lisahG'
 alias ..='cd ..'

@@ -11,6 +11,7 @@ alias myhosts='sudo vim /etc/hosts'
 alias brew-check='brew update && echo "---outdated---" && brew outdated'
 alias vim='nvim'
 alias agenda='icalBuddy -f -sc eventsToday'
+alias mux='tmux new-session -s "$(basename `pwd`)"'
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8

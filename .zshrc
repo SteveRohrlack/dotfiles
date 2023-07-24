@@ -1,4 +1,4 @@
-plugins=(git docker zsh-autosuggestions)
+plugins=(git brew docker zsh-autosuggestions)
 
 alias ll='ls -lisahG'
 alias ..='cd ..'
@@ -12,6 +12,9 @@ alias brew-check='brew update && echo "---outdated---" && brew outdated'
 alias vim='nvim'
 alias agenda='icalBuddy -f -sc eventsToday'
 alias mux='tmux new-session -s "$(basename `pwd`)"'
+alias fm='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias 'hist?'='history | cut -c 8- | fzf-tmux -p | tr -d "\n" | pbcopy'
+alias fzf="fzf-tmux"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -19,7 +22,12 @@ export LANG=en_US.UTF-8
 export EDITOR=nvim
 export VISUAL=nvim
 
-eval "$(op completion zsh)"; compdef _op op
+eval "$(goenv init -)"
 
-autoload -U +X bashcompinit
+# eval "$(op completion zsh)"; compdef _op op
+
 zstyle ':vcs_info:git:*' formats 'on %b'
+zstyle ':completion:*:*:docker:*' option-stacking yes
+
+# autoload -U +X bashcompinit
+autoload -U compinit && compinit

@@ -1,4 +1,5 @@
 local M = {}
+
 M.dap_go = {
   plugin = true,
   n = {
@@ -14,16 +15,25 @@ M.dap_go = {
       end,
       "Open debugger sidebar",
     },
+    ["<leader>gdt"] = {
+      function()
+        require("dap-go").debug_test()
+      end,
+      "Debug go test"
+    },
+    ["<leader>gdl"] = {
+      function()
+        require("dap-go").debug_last()
+      end,
+      "Debug last go test"
+    },
+    ["<leader>gdr"] = {
+      function()
+        require("dap").continue()
+      end,
+      "Debug run"
+    },
   },
-}
-
-M.general = {
-  n = {
-    ["<C-h>"] = { "<cmd>TmuxNavigateLeft<cr>", "tmux move left" },
-    ["<C-l>"] = { "<cmd>TmuxNavigateDown<cr>", "tmux move right" },
-    ["<C-j>"] = { "<cmd>TmuxNavigateUp<cr>", "tmux move down" },
-    ["<C-k>"] = { "<cmd>TmuxNavigateRight<cr>", "tmux move up" },
-  }
 }
 
 return M

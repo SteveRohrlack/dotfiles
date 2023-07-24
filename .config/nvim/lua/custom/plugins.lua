@@ -22,7 +22,8 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-      "gopls",
+        "gopls",
+        "delve",
       },
     },
   },
@@ -42,6 +43,9 @@ local plugins = {
   },
   {
     "mfussenegger/nvim-dap",
+    init = function()
+      require("core.utils").load_mappings("dap_go")
+    end,
   },
   {
     "leoluz/nvim-dap-go",

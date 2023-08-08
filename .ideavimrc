@@ -1,4 +1,23 @@
+"" line numbers
 set nu rnu
+
 set visualbell
-nnoremap zC :action CollapseRegionRecursively<CR>
-nnoremap zO :action ExpandRegionRecursively<CR>
+
+"" better search behaviour
+set ignorecase true
+set smartcase true
+
+"" Don't use arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+"" more nav options
+nnoremap J 5jzz
+nnoremap K 5kzz
+nnoremap H ^
+nnoremap L $
+
+"" Map \b to toggle the breakpoint on the current line
+"" map \b <Action>(ToggleLineBreakpoint)

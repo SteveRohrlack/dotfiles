@@ -23,3 +23,5 @@ ascii fallback: https://github.com/ryanoasis/nerd-fonts/blob/master/patched-font
 - amethyst
 - openrefine
 - fzf
+- kitty
+- maccy

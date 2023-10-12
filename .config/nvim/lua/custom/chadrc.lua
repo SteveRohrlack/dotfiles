@@ -8,6 +8,10 @@ M.ui = {
   statusline = {
     separator_style = "block",
   },
+
+  hl_override = {
+    TelescopeSelection = { bg = "nord_blue", fg = "black" },
+  },
 }
 
 M.plugins = "custom.plugins"

@@ -3,18 +3,23 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-      -- defaults 
-      "vim",
-      "lua",
+        -- defaults 
+        "vim",
+        "lua",
 
-      -- web dev 
-      "html",
-      "css",
-      "javascript",
-      "typescript",
-      "tsx",
-      "json",
-      "go",
+        -- web dev 
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+
+        "go",
+
+        "rust",
+        "toml",
+        "groovy",
       },
     },
   },
@@ -24,6 +29,7 @@ local plugins = {
       ensure_installed = {
         "gopls",
         "delve",
+        "rust-analyzer",
       },
     },
   },
@@ -78,6 +84,24 @@ local plugins = {
         require("nvim-surround").setup({
             -- Configuration here, or leave empty to use defaults
         })
+    end
+  },
+  {
+    "anuvyklack/pretty-fold.nvim",
+    lazy = false,
+    config = function ()
+      require("pretty-fold").setup()
+    end
+  },
+  {
+    "tpope/vim-commentary",
+    lazy = false,
+  },
+  {
+    "RaafatTurki/hex.nvim",
+    lazy = false,
+    config = function ()
+      require 'hex'.setup()
     end
   },
 }

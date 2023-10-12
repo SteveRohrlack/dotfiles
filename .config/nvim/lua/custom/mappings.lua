@@ -50,14 +50,14 @@ M.dap_go = {
 M.general = {
   n = {
     ["<C-h>"] = { "<cmd>TmuxNavigateLeft<cr>", "tmux move left" },
+    ["<C-l>"] = { "<cmd>TmuxNavigateRight<cr>", "tmux move right" },
     ["<C-j>"] = { "<cmd>TmuxNavigateDown<cr>", "tmux move down" },
     ["<C-k>"] = { "<cmd>TmuxNavigateUp<cr>", "tmux move up" },
-    ["<C-l>"] = { "<cmd>TmuxNavigateRight<cr>", "tmux move right" },
-    ["H"] = { "_", "move to beginning of the line" },
-    ["J"] = { "5jzz", "move downwards 5 lines" },
-    ["K"] = { "5kzz", "move upwards 5 lines" },
-    ["L"] = { "$", "move to end of the line" },
-  }
+    ["J"] = { "5j", "move downwards 5 lines" },
+    ["K"] = { "5k", "move upwards 5 lines" },
+    ["gt"] = { ":tabnext<cr>", "navigate to next tab" },
+    ["gT"] = { ":tabprevious<cr>", "navigate to previous tab" },
+  },
 }
 
 return M

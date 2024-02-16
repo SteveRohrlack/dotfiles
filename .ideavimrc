@@ -1,3 +1,8 @@
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'machakann/vim-highlightedyank'
+Plug 'preservim/nerdtree'
+
 set nu rnu
 set visualbell
 set ignorecase true
@@ -9,9 +14,6 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-"" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
-
 "" more nav options
 nnoremap J 5j
 nnoremap K 5k
@@ -20,5 +22,10 @@ nnoremap K 5k
 nnoremap g; :action JumpToLastChange<Enter>
 nnoremap g, :action JumpToNextChange<Enter>
 
-set commentary
-set surround
+let mapleader=" "
+map <leader>p <Action>(SelectInProjectView)
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>d <Action>(Debug)
+map <leader>r <Action>(RenameElement)
+
+inoremap jj <Esc>

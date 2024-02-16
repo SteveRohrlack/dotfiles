@@ -58,6 +58,9 @@ M.general = {
     ["gt"] = { ":tabnext<cr>", "navigate to next tab" },
     ["gT"] = { ":tabprevious<cr>", "navigate to previous tab" },
   },
+  i = {
+     ["jj"] = { "<ESC>", "escape insert mode" , opts = { nowait = true }},
+  }
 }
 
 return M

@@ -1,3 +1,4 @@
+vim.cmd('au TextYankPost * silent! lua vim.highlight.on_yank()')
 vim.wo.relativenumber = true
 
 vim.fn.sign_define('DapBreakpoint', { text = '⛔️' })

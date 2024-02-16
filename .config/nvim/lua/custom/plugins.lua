@@ -104,5 +104,36 @@ local plugins = {
       require 'hex'.setup()
     end
   },
+  {
+    "David-Kunz/gen.nvim",
+    lazy = false,
+    config = function ()
+      require("gen").model = "magicoder"
+      require("gen").display_mode = "split"
+    end
+  },
+  {
+    "nat-418/boole.nvim",
+    lazy = false,
+    config = function ()
+      require("boole").setup({
+        mappings = {
+          increment = '<C-a>',
+          decrement = '<C-x>'
+        },
+      })
+    end
+  },
+  {
+    "nvim-telescope/telescope-ui-select.nvim",
+    lazy = false,
+    config = function ()
+      require("telescope").load_extension("ui-select")
+    end
+  },
+  {
+    "junegunn/vim-peekaboo",
+    lazy = false,
+  },
 }
 return plugins

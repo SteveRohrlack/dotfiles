@@ -12,12 +12,24 @@ plugins=(
   zsh-autosuggestions
 )
 
+FPATH=~/.zsh_site-functions:$FPATH
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 if [ "$TERM_PROGRAM" = tmux ]; then
   tmux-window-name() {
     ($TMUX_PLUGIN_MANAGER_PATH/tmux-window-name/scripts/rename_session_windows.py &)
   }
   add-zsh-hook chpwd tmux-window-name
-fi	
+fi
+
+if type rg &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='rg --files'
+fi
 
 alias ll='ls -lisahG'
 alias ..='cd ..'
@@ -44,6 +56,9 @@ export LANG=en_US.UTF-8
 export EDITOR=nvim
 export VISUAL=nvim
 
+export PATH="$HOME/.goenv/shims:"$PATH
 eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
 
 zstyle ':vcs_info:git:*' formats 'on %b'

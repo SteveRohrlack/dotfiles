@@ -21,5 +21,6 @@
 - amethyst
 - openrefine
 - fzf
+- ripgrep
 - kitty
 - maccy

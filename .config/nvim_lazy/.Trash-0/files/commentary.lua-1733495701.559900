@@ -1,0 +1,7 @@
+return {
+  -- "tpope/vim-commentary",
+  -- lazy = false,
+  -- keys = {
+    -- { "<leader>/", "<cmd>Commentary<cr>", desc="comment" }
+  -- },
+}

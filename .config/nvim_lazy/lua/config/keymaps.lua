@@ -9,7 +9,7 @@ map("i", "kk", "<esc>", { desc = "back to normal" })
 
 -- buffer navigation
 map("n", "<leader>b;", ":bnext<cr>", { desc = "next buffer" })
-map("n", "<leader>b.", ":bprev<cr>", { desc = "previous buffer" })
+map("n", "<leader>b,", ":bprev<cr>", { desc = "previous buffer" })
 
 -- fold focus
 map("n", "<leader>zf", "zMzOzz", { desc = "focus fold" })

@@ -19,7 +19,7 @@ return {
   keys = {
     { "<leader>x;", "<cmd>Lspsaga diagnostic_jump_next<CR>", desc = "next diagnostic" },
     { "<leader>x,", "<cmd>Lspsaga diagnostic_jump_prev<CR>", desc = "previous diagnostic" },
-    { "<leader>gr,", "<cmd>Lspsaga rename<CR>", desc = "lsp rename" },
-    { "<leader>gd,", "<cmd>Lspsaga peek_definition<CR>", desc = "peek definition" },
+    { "<leader>gr", "<cmd>Lspsaga rename<CR>", desc = "lsp rename" },
+    { "<leader>gd", "<cmd>Lspsaga peek_definition<CR>", desc = "peek definition" },
   },
 }

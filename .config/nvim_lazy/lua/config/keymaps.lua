@@ -12,5 +12,8 @@ map("n", "<leader>b;", ":bnext<cr>", { desc = "next buffer" })
 map("n", "<leader>b,", ":bprev<cr>", { desc = "previous buffer" })
 
 -- fold focus
-map("n", "<leader>zf", "zMzOzz", { desc = "focus fold" })
-map("n", "<leader>zb", "zRzz", { desc = "blur fold" })
+-- map("n", "<leader>zf", "zMzOzz", { desc = "focus fold" })
+-- map("n", "<leader>zb", "zRzz", { desc = "blur fold" })
+
+-- save
+map("n", "<C-s>", ":w<cr>", { desc = "save" })

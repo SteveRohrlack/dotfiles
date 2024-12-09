@@ -10,6 +10,9 @@ return {
     ui = {
       border = "single",
     },
+    symbol_in_winbar = {
+      enable = false,
+    },
   },
   ft = "go,php",
   dependencies = {

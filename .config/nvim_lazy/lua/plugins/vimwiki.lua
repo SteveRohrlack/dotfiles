@@ -1,6 +1,7 @@
 return {
   "vimwiki/vimwiki",
-  lazy = false,
-  init = function ()
-  end
+  init = function() end,
+  keys = {
+    { "<leader>ww", "<cmd>VimwikiIndex<cr>", desc = "open personal wiki" },
+  },
 }

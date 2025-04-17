@@ -5,6 +5,7 @@ return {
       "gopls",
       "delve",
       "rust-analyzer",
+      "golines",
     },
   },
 }

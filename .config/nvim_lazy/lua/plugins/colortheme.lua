@@ -9,6 +9,7 @@ return {
       colors = {
         palette = {
           fujiWhite = "#b8b4d0", -- foreground
+          oldWhite = "#9997a9", -- Dark foreground (statuslines)
           fujiGray = "#587673", -- comments
           carpYellow = "#c6bb95", -- identifiers
           surimiOrange = "#c6bb95", -- const, import, bools

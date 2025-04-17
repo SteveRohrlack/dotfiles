@@ -16,7 +16,11 @@ set.ignorecase = true
 set.smartcase = true
 
 -- set.colorcolumn = "120"
-set.textwidth = 120
+set.textwidth = 100
+-- set.colorcolumn = "41"
+
+-- load local rc files
+set.exrc = true
 
 -- use treesitter as default foldmethod
 -- set.foldmethod = "expr"
@@ -26,7 +30,11 @@ set.textwidth = 120
 vim.filetype.add({
   pattern = {
     [".*.jenkinsfile"] = "groovy",
+    [".*.Jenkinsfile"] = "groovy",
     ["Jenkinsfile..*"] = "groovy",
     ["Jenkinsfile"] = "groovy",
   },
 })
+
+-- vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg = "cyan", bg = "cyan" })
+-- vim.fn.matchadd("ColorColumn", "%31v")

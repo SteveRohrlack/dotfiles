@@ -1,5 +1,6 @@
 return {
   "tokyonight.nvim",
+  enabled = false,
   opts = {
     transparent = true,
     styles = {
@@ -47,6 +48,13 @@ return {
       -- find grey out
       hl.FlashBackdrop = {
         fg = "#8189ab",
+      }
+      -- code comments
+      hl.Comment = {
+        fg = lineNr,
+      }
+      hl.CursorLine = {
+        bg = "#26293e",
       }
     end,
   },

@@ -1,4 +1,9 @@
 return {
   "folke/snacks.nvim",
-  opts = {},
+  opts = {
+    notifier = {
+      enabled = false,
+      style = "fancy",
+    },
+  },
 }
